@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sampleTest"
+        class="com.tildev.spring4.spring4_01.SampleImpl">
+        <property name="s">
+            <value>String
+            </value>
+        </property>
+    </bean>
+
+    <bean id="sample"
+        class="com.tildev.spring4.spring4_01.SampleVo">
+        <property name="list">
+            <list>
+                <value>s_1</value>
+                <value>s_2</value>
+                <value>s_3</value>
+            </list>
+        </property>
+        <property name="s" value="s" />
+        <property name="sample">
+            <ref bean="sampleTest" />
+        </property>
+    </bean>
+</beans>
